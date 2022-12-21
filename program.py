@@ -51,7 +51,7 @@ def getNewsFromRss():
   newsList = []
 
   for idx,item in enumerate(itemList):
-      news_item_list = item['ht:news_item']
+      news_item_list = item['item']
 
       def mapping (news_item):
           temp_dict = dict()
