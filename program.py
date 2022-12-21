@@ -41,7 +41,7 @@ def callWebhook (payload):
   print(res.text)
 
 def getNewsFromRss():
-  RSS_URL = "https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query="+"ERM"
+  RSS_URL = 'http://newssearch.naver.com/search.naver?where=rss&sort_type=0&query=ERM'
   res = requests.get(RSS_URL)
   ordered_dict = xmltodict.parse(res.text)
   json_type = json.dumps(ordered_dict)
