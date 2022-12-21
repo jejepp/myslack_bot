@@ -55,10 +55,10 @@ def getNewsFromRss():
 
       def mapping (news_item):
           temp_dict = dict()
-          temp_dict['title'] = news_item['ht:news_item_title']
-          temp_dict['descript'] = news_item['ht:news_item_snippet']
-          temp_dict['url'] = news_item['ht:news_item_url']
-          temp_dict['source'] = news_item['ht:news_item_source']
+          temp_dict['title'] = news_item['title']
+          temp_dict['descript'] = news_item['description']
+          temp_dict['url'] = news_item['link']
+          temp_dict['source'] = news_item['source']
           return temp_dict
 
       if(isinstance(news_item_list,list)):
